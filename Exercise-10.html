@@ -12,7 +12,17 @@
 
             // Jou instructies volgen hier
 
-
+            for (var i = 0; i < 9; i++) {
+             robotArm.moveRight();
+             robotArm.grab();
+             color = robotArm.scan();
+             if (color === "white") {
+                 robotArm.moveRight();
+                 robotArm.drop();
+             } else {
+                 robotArm.drop();
+             }
+         }
 
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();

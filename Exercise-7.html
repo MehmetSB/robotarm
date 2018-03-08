@@ -11,8 +11,18 @@
             robotArm.loadLevel("exercise 8");
 
             // Jou instructies volgen hier
+            robotArm.moveRight();
+            for (i = 0; i < 7; i++){
+              robotArm.grab();
+              for (j = 0; j < 8; j++){
+                robotArm.moveRight();
+              }
+              robotArm.drop();
+              for (k = 0; k < 8; k++){
+                robotArm.moveLeft();
+              }
 
-
+            }
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
         </script>
