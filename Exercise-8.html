@@ -11,14 +11,14 @@
             robotArm.loadLevel("exercise 9");
             robotArm.speed = 9000;
             // Jou instructies volgen hier
-            for (i = 0; i < 4; i++) {
-              for (j = 0; j < 4; j++) {
+            for(var row = 1; row <=4; row++){
+              for(var block = 1; block <=row; block++){
                 robotArm.grab();
-                for (k = 0; k < 5; k++) {
+                for(var i = 0; i < 5; i++){
                   robotArm.moveRight();
                 }
                 robotArm.drop();
-                for (l = 0; l < 5; l++) {
+                for(var i=0; i<5; i++){
                   robotArm.moveLeft();
                 }
               }
