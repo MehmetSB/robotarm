@@ -9,15 +9,19 @@
 
             // Het level inladen
             robotArm.loadLevel("exercise 11");
-            robotArm.speed = 9000;
+            robotArm.speed = 500;
             // Jou instructies volgen hier
-            for (var i = 0; i < 9; i++) {
+            for (var h = 0; h < 10; h++) {
               robotArm.moveRight();
+            }
+            for (var i = 0; i < 9; i++) {
+              robotArm.moveLeft();
               robotArm.grab();
               color = robotArm.scan();
               if (color === "white") {
                 robotArm.moveRight();
                 robotArm.drop();
+                robotArm.moveLeft();
               } else {
                 robotArm.drop();
               }
